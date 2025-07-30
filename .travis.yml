@@ -1,0 +1,16 @@
+os: linux
+dist: focal
+ 
+vm:  # Existing key
+  create:
+    name: my_rtest_name  # Custom identifier string, human-readable
+ 
+before_install:
+  - sudo apt-get -y install libxml2-dev
+ 
+addons:
+  apt:
+    update: true
+ 
+script:
+  - echo "TEST"
